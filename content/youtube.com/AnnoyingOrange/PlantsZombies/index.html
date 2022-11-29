@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Annoying Orange vs Plants vs Zombies</title>
+
+    <!-- SEO / social media-->
+    <meta name="author" content="Annoying Orange" />
+    <meta name="copyright" content="2010" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/favicon-180x180.png" sizes="180x180">
+
+    <link href="fonts.css"
+        rel="stylesheet">
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="engine.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+        #intro {
+            font-size: 18px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .introLink {
+            color:#F6A53D;
+            text-decoration: none;
+        }
+
+        #playButton {
+            background: #F6A53D;
+            background-image: -webkit-linear-gradient(top, #F6A53D, #D0501E);
+            background-image: -moz-linear-gradient(top, #F6A53D, #D0501E);
+            background-image: -ms-linear-gradient(top, #F6A53D, #D0501E);
+            background-image: -o-linear-gradient(top, #F6A53D, #D0501E);
+            background-image: linear-gradient(to bottom, #F6A53D, #D0501E);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-size: 30px;
+            font-weight: 700;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: solid #337FED 0px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            
+        }
+
+        #playButton a {
+            color: white;
+        }
+
+        #playButton:hover {
+            border: solid #337FED 0px;
+            background: #D0501E;
+            background-image: -webkit-linear-gradient(top, #D0501E, #F6A53D);
+            background-image: -moz-linear-gradient(top, #D0501E, #F6A53D);
+            background-image: -ms-linear-gradient(top, #D0501E, #F6A53D);
+            background-image: -o-linear-gradient(top, #D0501E, #F6A53D);
+            background-image: linear-gradient(to bottom, #D0501E, #F6A53D);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .buttonCenter {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+       
+    </style>
+
+    <script>
+
+
+        $(document).ready(function () {
+            $("#choicesContainer").css("display", "none");
+            $("#choicesContainer").css("animation-play-state", "paused");
+            $("#menuContainer").css("display", "none");
+            $("#menuContainer").css("animation-play-state", "paused");
+            $("#container").css("display", "none");
+
+            $("#playButton").on('click touch', function () {
+                $("#container").css("display", "block");
+                $("#intro").css("display", "none");
+
+                initGame();
+            });
+        });
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div id="intro">
+        <h1>Annoying Orange vs Plants vs Zombies</h1>
+        <div class="buttonCenter">
+            <a href="#" id="playButton">PLAY</a>
+        </div>
+    </div>
+
+    <div id="container">
+
+
+        <div id="videos">
+        </div>
+
+        <div id="menuContainer">
+            <div id="play" class="button"></div>
+            <div id="pause" class="button"></div>
+            <div id="rewind10" class="button"></div>
+            <div id="ffd10" class="button"></div>
+            <div id="previous" class="button"></div>
+            <div id="next" class="button"></div>
+
+
+        </div>
+
+        <div id="choicesContainer">
+            <div id="barBackground">
+                <div id="bar">
+                </div>
+            </div>
+
+            <div id="choices">
+            </div>
+
+        </div>
+        <div id="passage">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
